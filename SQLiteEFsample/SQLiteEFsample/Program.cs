@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using SQLiteEFsample.Data;
+using SQLiteEFsample.Data ;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<MySqliteContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("MySqliteContext") ?? throw new InvalidOperationException("Connection string 'MySqliteContext' not found.")));
